@@ -60,7 +60,7 @@ public class Note {
   private PVector position;
   private float noteWidth, noteHeight;
   private SoundFile sound;
-  char type;
+  private char type;
   private int index;
 
   private int prevMillis = 0;
@@ -119,7 +119,6 @@ public class LoopStation {
   public boolean recording;
   public ArrayList<ArrayList<HashMap<String, Object>>> loops;
 
-
   public LoopStation() {
     this.recording = false;
     this.loops = new ArrayList<ArrayList<HashMap<String, Object>>>();
@@ -132,6 +131,7 @@ public class LoopStation {
       }
     }
   }
+  
   public void toggleRecord() {
     this.cleanEmptyTracks();
 
@@ -155,9 +155,10 @@ public class LoopStation {
 
   public void playAll() {
     for (ArrayList<HashMap<String, Object>> loop : this.loops) {
-      for (HashMap<String, Object> data : loop) {
+      for (int i = 0; i < loop.size(); i++) {
+        HashMap<String, Object> data = loop.get(i);
         if (float(frameCount % loopDuration) == (float) data.get("timestamp")) {
-          ((SoundFile) data.get("sound")).play();
+          ((SoundFile) (data.get("sound"))).play();
         }
       }
     }
@@ -307,7 +308,7 @@ public class Midi {
 
     fill(30);
     rect(left, 30, right - left, 150, 4);
-    
+
     for (ArrayList<HashMap<String, Object>> loop : loopStation.loops) {
       for (int i = 0; i < loop.size(); i++) {
         HashMap<String, Object> data = loop.get(i);
@@ -334,8 +335,8 @@ Midi midi;
 void setup() {
   frameRate(60);
   size(750, 480);
-  midi = new Midi();
 
+  midi = new Midi();
   // for serial communication with arduino
   serial = new Serial(this, Serial.list()[0], 9600);
   serial.clear();
