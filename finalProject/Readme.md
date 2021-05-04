@@ -30,6 +30,6 @@ The MIDI player will only play the notes when it's not recording. However, it ad
 ### Challenges
 The main challenge of this project was to make everything ready in quite a short amount of time. Given that I had other final projects and exams, scheduling to work on it was difficult.
 
-Throughout the project, I only faced some minor challenges which I was fortunately able to solve myself:
+Throughout the project, I faced a few minor challenges which I was eventually able to solve:
 - The inability of using ```millis()``` over ```frameCount``` in Processing because it'd skip some milliseconds due to high framerate and wouldn't play some recorded notes.
 - Sound Distortion: While running the project on Windows, the sounds were being distorted while the loopstation was playing more than a couple of sounds at the same time. I tried using the ```Minim``` library instead, but there was no luck. The issue was gone when I switched back to Ubuntu. Looks like I had problems with my sound driver on Windows.

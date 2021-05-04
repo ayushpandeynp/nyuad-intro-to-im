@@ -26,7 +26,7 @@ Right now, I have a good framework for the project ready where I can pass in any
 
 
 ### Apr 22, 2021
-I had made the basic framework ready by just using the major & flat notes (the white ones on the keyboard). Now I had to add sharp notes and drums. It did not satisfy me to manually provide positions and render the black keys on screen. So, I used figured out something like this:
+I had made the basic framework ready by just using the major & flat notes (the white ones on the keyboard). Now I had to add sharp notes and drums. It did not satisfy me to manually provide positions and render the black keys on screen. So, I figured out something like this:
 
 ```java
 int blackNoteCount = 0, marginOffset = 0;
@@ -51,10 +51,10 @@ while (blackNoteCount < limit) {
 }
 ```
 
-I set up the drums as well and now everything was working the way I expected.
+I set up the drums as well and now everything works the way I expected.
 
 ### APR 23, 2021
-I still needed to add the visualization. I would've skipped it but it was the only thing that would indicate a musician which point in the loop has what kind of note. So, I decided to use every note's ```index``` variable to render the bars on screen. The ```index``` is used to position the notes and get the filename of these notes. The more index, the higher frequency of notes. Therefore, it would be a better indicator of intensity than anything else.
+I still needed to add the visualization. I would've skipped it but it was the only thing that would indicate a musician which point in the loop includes what kind of note. So, I decided to use every note's ```index``` variable to render the bars on screen. As ```index``` is used to position the notes and get the filename of these notes, the more index, the higher frequency of notes. Therefore, it would be a better indicator of intensity than anything else.
 
 I then added a method ```visualization()``` that renders bars at the exact point where notes are recorded. Here's how the bars are rendered:
 
@@ -79,13 +79,13 @@ for (ArrayList < HashMap < String, Object >> loop: loopStation.loops) {
 I added buttons to RECORD, RESET and UNDO. As I had already thought of it in the beginning and had created a good framework, the task became really easy. Any last minute modification wouldn't have been a tedious task because of having a strong framework setup.
 
 ### APR 27, 2021
-Now, I had to connect everything with the controller hardware. I wrote code for Arduino and tested out everything so that there was no issue in the Serial communication. I also added the circular indicators that changes as the value of potentiometer changes.
+Now, I had to connect everything with the controller. I wrote code for Arduino and tested everything out so there was no issue in the Serial communication. I also added the circular indicators that change as the value of potentiometer changes.
 
 ### APR 28, 2021
-Added some final touchups and experimented with the loopstation. It turned out to be more than what I had expected. I was able to play all the notes smoothly and create weird as well as smooth tracks.
+Added some final touchups and experimented with the loopstation. It turned out to be more efficient than what I had expected. I was able to play all the notes smoothly and create weird as well as smooth tracks.
 
-I have created a demonstration video that plays Shape of You by Ed Sheeran through my loopstation.
+I then created a demonstration video that plays Shape of You by Ed Sheeran through the loopstation.
 
-PROJECT COMPLETE! CHEERS!
+**PROJECT COMPLETE! CHEERS!**
 
 Thank you!
