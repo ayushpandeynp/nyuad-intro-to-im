@@ -23,7 +23,7 @@ A real-time music creation tool for independent musicians to add tracks and loop
 - To change the loop duration, edit ```loopDuration``` variable at the top of Processing program.
 
 ### How does it work?
-Any data changed on the controller (such as switch press, potentiometer value change, and LDR value change) is communicated through the Serial port used by Arduino UNO. The user interface now renders circular indicators at the mapped position of potentiometer.
+Any data changed on the controller (such as switch press, potentiometer value change, and LDR value change) is communicated through the Serial port by using Arduino UNO. The user interface now renders circular indicators at the mapped position of potentiometer.
 
 The MIDI player will only play the notes when it's not recording. However, it adds the notes to loopstation in case the interface is in recording mode. After recording essential notes, the loopstation plays recored notes at the exact position where the note was recorded (by also displaying the bar visualization).
 
@@ -32,4 +32,4 @@ The main challenge of this project was to make everything ready in quite a short
 
 Throughout the project, I faced a few minor challenges which I was eventually able to solve:
 - The inability of using ```millis()``` over ```frameCount``` in Processing because it'd skip some milliseconds due to high framerate and wouldn't play some recorded notes.
-- Sound Distortion: While running the project on Windows, the sounds were being distorted while the loopstation was playing more than a couple of sounds at the same time. I tried using the ```Minim``` library instead, but there was no luck. The issue was gone when I switched back to Ubuntu. Looks like I had problems with my sound driver on Windows.
+- Sound Distortion: While running the project on Windows, the sounds were being distorted as the loopstation was playing more than a couple of sounds at the same time. I tried using the ```Minim``` library instead, but there was no luck. The issue was gone when I switched back to Ubuntu. Looks like I had problems with my sound driver on Windows.
