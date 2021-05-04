@@ -11,7 +11,7 @@ This is a very general idea of the project, so a lot of things might change. Any
 ### Schematic
 Most of the work will be handled in Processing but the Arduino will be used to retrieve information on which keys were pressed (using switches) and where to move the octave / 2 range on screen (using the potentiometer). I am also thinking about showing some result in Arduino too, but need to brainstorm about it. Here's my initial schematic:
 
-![](images/schematic.jpg)
+![](images/schematic_final.jpg)
 
 # Journal
 

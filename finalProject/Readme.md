@@ -11,7 +11,7 @@ A real-time music creation tool for independent musicians to add tracks and loop
 ![](images/output_arduino_final.jpg)
 
 ### Schematic
-![](images/schematic.jpg)
+![](images/schematic_final.jpg)
 
 ### Instructions
 - As there are only 4 switches to play notes, you can use the potentiometer to drag the range of notes in the interface. The respective colors represent which switch to press in order to play the required note.
